@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#genre-select, #book-form input, #book-form select, #book-form button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+#book-list {
+    max-height: 400px; /* 🔹 Limite la hauteur pour activer le scroll */
+    overflow-y: auto;  /* 🔹 Active le scroll vertical */
+    list-style-type: none;
+    padding: 0;
+    background: white;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#book-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#book-list li:last-child {
+    border-bottom: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* effets */
+/* 🔥🔥 Background animé avec un effet glitch 🔥🔥 */
+@keyframes neonBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #020024, #090979, #00d4ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: neonBackground 10s infinite linear;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* 🔥🔥 Texte glitch et incliné 🔥🔥 */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00d4ff; transform: skewX(2deg); }
+    50% { text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00d4ff; transform: skewX(-2deg); }
+    100% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00d4ff; transform: skewX(2deg); }
+}
+
+h1, h2 {
+    font-size: 3em;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    animation: glitch 0.3s infinite alternate;
+    transform: rotate(-5deg);
+    position: relative;
+}
+
+/* 🔥🔥 Inputs / Select / Boutons - Incliné et interactif 🔥🔥 */
+input, select, button {
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+    margin: 20px auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 400px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    transition: 0.3s;
+    transform: skewX(-5deg);
+}
+
+input, select {
+    background: black;
+    color: white;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+input:focus, select:focus {
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* 🔥🔥 Effet pulsant sur les boutons 🔥🔥 */
+@keyframes pulseNeon {
+    0% { box-shadow: 0 0 10px #ff00ff; }
+    50% { box-shadow: 0 0 30px #ff00ff; }
+    100% { box-shadow: 0 0 10px #ff00ff; }
+}
+
+button {
+    cursor: pointer;
+    background: black;
+    color: #ff00ff;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+    animation: pulseNeon 1s infinite alternate;
+}
+
+button:hover {
+    background: #ff00ff;
+    color: black;
+    box-shadow: 0 0 30px #ff00ff;
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* 🔥🔥 Liste des livres (scroll sur la page entière) 🔥🔥 */
+#book-list-container {
+    margin-top: 50px;
+    transform: rotate(5deg);
+}
+
+#book-list {
+    list-style: none;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+#book-list li {
+    padding: 15px;
+    margin: 10px 0;
+    border-bottom: 2px solid #ff00ff;
+    position: relative;
+    text-shadow: 0 0 5px #ff00ff;
+    animation: bounce 0.5s ease-in-out infinite alternate;
+}
+
+/* 🔥🔥 Effet de saut sur les livres 🔥🔥 */
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+/* 🔥🔥 Background animé 🔥🔥 */
+@keyframes neonBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #020024, #090979, #00d4ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: neonBackground 10s infinite linear;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* 🔥🔥 Titres animés 🔥🔥 */
+@keyframes titleBounce {
+    0%, 100% { transform: scale(1) rotate(-5deg); }
+    50% { transform: scale(1.2) rotate(5deg); }
+}
+
+h1, h2 {
+    font-size: 3em;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    animation: titleBounce 2s infinite alternate;
+    position: relative;
+}
+
+/* 🔥🔥 Images mouvantes 🔥🔥 */
+.floating-image {
+    position: absolute;
+    width: 150px;
+    opacity: 0.6;
+    animation: floatAround 6s infinite alternate ease-in-out;
+}
+
+@keyframes floatAround {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(30px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(-10deg); }
+}
+
+/* 🔥🔥 Livres flottants et en rotation 🔥🔥 */
+@keyframes bookFloat {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+#book-list-container {
+    margin-top: 50px;
+}
+
+#book-list {
+    list-style: none;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+#book-list li {
+    padding: 15px;
+    margin: 10px 0;
+    border-bottom: 2px solid #ff00ff;
+    position: relative;
+    text-shadow: 0 0 5px #ff00ff;
+    animation: bookFloat 3s infinite alternate ease-in-out;
+    transform: rotate(calc(var(--random-rotation) * 1deg));
+}
+
+/* 🔥🔥 Ajout d’une aura de lumière 🔥🔥 */
+@keyframes aura {
+    0% { box-shadow: 0 0 10px #ff00ff; }
+    50% { box-shadow: 0 0 30px #ff00ff; }
+    100% { box-shadow: 0 0 10px #ff00ff; }
+}
+
+button {
+    cursor: pointer;
+    background: black;
+    color: #ff00ff;
+    border: 2px solid #ff00ff;
+    animation: aura 1s infinite alternate;
+}
+
+button:hover {
+    background: #ff00ff;
+    color: black;
+    box-shadow: 0 0 40px #ff00ff;
+    transform: scale(1.1) rotate(5deg);
+}
+

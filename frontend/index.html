@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bibliothèque Du CHAOS</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Bibliothèque du CHAOS</h1>
+
+        <h2>Ajouter / Modifier un Livre</h2>
+        <form id="book-form">
+            <input type="hidden" id="book-id">
+            <label for="title">Titre :</label>
+            <input type="text" id="title" required>
+            <label for="author">Auteur :</label>
+            <input type="text" id="author" required>
+            <label for="book-genres">Genres :</label>
+            <select id="book-genres" multiple></select>
+            <button type="submit">⚡ Enregistrer ⚡</button>
+        </form>
+
+        <label for="genre-select">Filtrer par genre :</label>
+        <select id="genre-select">
+            <option value="">Tous</option>
+        </select>
+        <button onclick="fetchBooks()">Rechercher</button>
+
+        <h2>Liste des Livres</h2>
+        <div id="book-list-container">
+            <ul id="book-list"></ul>
+        </div>
+
+        <script src="script.js"></script>
+        <script src="neon-effects.js"></script>
+    </body>
+</html>
